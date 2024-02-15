@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sysevil.github.io/</loc>
-    <lastmod>2024-02-15T08:18:14-03:00</lastmod>
+    <lastmod>2024-02-15T08:46:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sysevil.github.io/posts/analysis-joomla-cve-2023-23752/</loc>
+    <lastmod>2024-02-15T08:46:00-03:00</lastmod>
+  </url><url>
+    <loc>https://sysevil.github.io/posts/</loc>
+    <lastmod>2024-02-15T08:46:00-03:00</lastmod>
   </url><url>
     <loc>https://sysevil.github.io/htb/</loc>
     <lastmod>2024-02-15T08:18:14-03:00</lastmod>

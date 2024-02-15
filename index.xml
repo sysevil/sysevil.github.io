@@ -4,10 +4,17 @@
     <title></title>
     <link>https://sysevil.github.io/</link>
     <description>Recent content on </description>
-    <generator>localhost -- localhost.io</generator>
+    <generator>  --  localhost</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Feb 2024 08:46:00 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 15 Feb 2024 15:55:15 -0300</lastBuildDate>
     <atom:link href="https://sysevil.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crafty</title>
+      <link>https://sysevil.github.io/htb/crafty/</link>
+      <pubDate>Thu, 15 Feb 2024 15:55:15 -0300</pubDate>
+      <guid>https://sysevil.github.io/htb/crafty/</guid>
+      <description>author: sysevil&#xA;OS: Windows Difficult: Easy ip: 10.10.11.249&#xA;Port Scan nmap -p- -T4 --min-rate=10000 10.10.11.249 -oG open_ports_full Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-15 13:34 -03 Nmap scan report for 10.10.11.249 (10.10.11.249) Host is up (0.13s latency). Not shown: 65533 filtered tcp ports (no-response) PORT STATE SERVICE 80/tcp open http 25565/tcp open minecraft Nmap done: 1 IP address (1 host up) scanned in 13.58 seconds nmap -sV -sC -A -p 80,25565 -T4 --min-rate=1000 10.</description>
+    </item>
     <item>
       <title>Analysis of Joomla CVE-2023-23752</title>
       <link>https://sysevil.github.io/posts/analysis-joomla-cve-2023-23752/</link>

